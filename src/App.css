@@ -1,0 +1,424 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background: red;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+.mystyle{
+  display: none !important;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.music{
+  width: 9%;
+    position: absolute;
+    left: 439px;
+    top: 496px;
+    z-index: 10;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+
+.images{
+  width: 52%;
+  /* display: block; */
+  position: absolute;
+  right: 300px;
+}
+.one{
+  width: 49%;
+  z-index: 2;
+}
+
+.two{
+  top:20px;
+  z-index: 1;
+}
+
+.three{
+  top:55px;
+  z-index: 3;
+}
+
+.four{
+  top:100px;
+  z-index: 4;
+}
+
+.five{
+  /* display: none; */
+  display: inline;
+  z-index: 5;
+  top:320px;
+  width: 10%;
+  right: 46vw;
+}
+.five1{
+  display:none;
+  z-index: 5;
+  top:250px;
+  width: 38%;
+  right: 380px;
+}
+.five2{
+  display:none;
+  z-index: 5;
+  top:250px;
+  width: 35%;
+  right: 420px;
+}
+.five3{
+  display:none;
+  z-index: 5;
+  top:250px;
+  width: 35%;
+  right: 420px;
+}
+
+.six{
+  display: none;
+  z-index: 6;
+  top:200px;
+  width: 23%;
+  right: 620px;
+}
+
+.six1{
+  display:none;
+  transform: rotate(20deg);
+  z-index: 6;
+  top:400px;
+  width: 25%;
+  right: 420px;
+}
+
+.six2{
+  display:none;
+  z-index: 6;
+  top:440px;
+  width: 20%;
+  right: 600px;
+}
+
+
+.blue{
+  background-color:blue;
+  height: 33vh;
+}
+
+
+
+
+/* Srorejs class */
+
+.store1{
+  width:88%;
+  right:120px;
+}
+
+.store2 {
+  /* display: none; */
+  width: 37%;
+  right: 441px;
+  top: 160px;
+
+}
+
+
+.store3 {
+  /* display: none; */
+  width: 33%;
+  right: 734px;
+  height: 500px;
+  top:22px;
+
+}
+
+.store4 {
+  /* display: none; */
+  width: 46%;
+right: 170px;
+height: 500px;
+
+}
+
+.store5l {
+  /* display: none; */
+  width: 26%;
+    left: 0px;
+    height: 530px;
+    top: 73px;
+
+}
+
+.store5r {
+  /* display: none; */
+  width: 23%;
+right: 127px;
+height: 530px;
+top: 14px;
+
+}
+
+.store6l {
+  /* display: none; */
+  width: 22%;
+      left: 232px;
+      top: 280px;
+      z-index: 2;
+}
+
+.store6m {
+  /* display: none; */
+  width: 26%;
+top: 300px;
+right: 457px;
+z-index: 6;
+
+}
+.store6r {
+  /* display: none; */
+  width: 23%;
+  top: 260px;
+  right: 161px;
+  z-index: 2;
+
+}
+
+.store7l {
+  /* display: none; */
+  width: 19%;
+LEFT: 232px;
+top: 250px;
+z-index: 2;
+}
+
+.store7r {
+  /* display: none; */
+  width: 17%;
+  right: 178px;
+  top: 235px;
+  z-index: 2;
+}
+
+.store8l {
+  display: none;
+
+}
+
+.store8r {
+  display: none;
+
+}
+
+.store9 {
+  /* display: none; */
+  width: 88%;
+/* bottom: -34px; */
+left: 53px;
+z-index: 1;
+}
+
+.store101l {
+  display: none;
+
+}
+
+.store101m {
+  /* display: none; */
+  width: 6%;
+  top: 486px;
+  left: 503px;
+
+
+}
+
+.store10l {
+  /* display: none; */
+  width: 8%;
+  left: 110px;
+  /* bottom: 0px; */
+  z-index: 2;
+  top:392px;
+}
+
+.store10r {
+  /* display: none; */
+  width: 13%;
+/* bottom: 0px; */
+right: 379px;
+top:425px;
+
+}
+
+.store11 {
+  display: none;
+  z-index: 6;
+    /* bottom: 70px; */
+    top: 108px;
+
+}
+.store12 {
+  display: none;
+  z-index: 6;
+    /* bottom: 70px; */
+    right: 350px;
+    top: 108px;
+
+}
+.store13 {
+  display: none;
+  z-index: 6;
+    /* bottom: 70px; */
+  right: 350px;
+  top: 108px;
+}
+
+
+.kiosk{
+  width:100%;
+  height: 98%;
+}
+
+.bugerBar{
+  background-color: #99ffff;
+  width:100%;
+}
+
+.burger-shop{
+  width: 50%;
+  height:99vh;
+}
+
+.burger1{
+  position: absolute;
+  top: 11%;
+  width: 131px;
+  height: 78px;
+  left: 428px;
+}
+.burger2{
+  position: absolute;
+  top: 11%;
+  width: 131px;
+  height: 78px;
+  left: 595px;
+}
+.burger3{
+  position: absolute;
+  top: 11%;
+  width: 141px;
+  height: 78px;
+  left: 771px;
+}
+.choose{
+  display: none;
+  width: 19%;
+  position: absolute;
+  top: 31%;
+  left: 44%;
+}
+
+.pay{
+  display: none;
+  width: 10%;
+  position: absolute;
+  top: 22%;
+  right: 23%;
+}
+
+.order{
+  width: 100%;
+  display: none;
+}
+
+.exit{
+  position: absolute;
+  width: 9%;
+  top: 31%;
+  transform: rotate(-18deg);
+  left: 26%;
+
+}
+
+.close-kiosk{
+  position: absolute;
+  top: 12%;
+  z-index: 2;
+  left: 26%;
+  width: 50%;
+  transform: rotate(-10deg);
+}
+
+.portal{
+  position: absolute;
+  width: 200px;
+  top: 88%;
+  left: 42%;
+  z-index: 11;
+}
+
+.tuhutz{
+  width:100%;
+  max-height:100px;
+}
+
+.karl{
+  width: 100%;
+}
+
+.karl-bio{
+  color:white;
+  padding: 0 !important;
+}
