@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background: red;
 }
@@ -9,8 +11,17 @@
   height: 40vmin;
   pointer-events: none;
 }
-.mystyle{
+
+.mystyle {
   display: none !important;
+}
+
+.logo {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  top: 2%;
+  left: 26%;
 }
 
 .App-header {
@@ -23,12 +34,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.music{
-  width: 9%;
-    position: absolute;
-    left: 439px;
-    top: 496px;
-    z-index: 10;
+
+.music {
+  width: 6%;
+  position: absolute;
+  left: 33%;
+  bottom: 18%;
+  z-index: 10;
+  transform: rotate(70deg);
 }
 
 .App-link {
@@ -44,7 +57,6 @@
   }
 }
 
-
 #myVideo {
   position: fixed;
   right: 0;
@@ -53,118 +65,119 @@
   min-height: 100%;
 }
 
-
 video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-    background-size: cover;
-    transition: 1s opacity;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
-
-.images{
+.images {
   width: 52%;
   /* display: block; */
   position: absolute;
   right: 300px;
+  cursor: pointer;
 }
-.one{
+
+.one {
   width: 49%;
   z-index: 2;
 }
 
-.two{
-  top:20px;
+.two {
+  top: 20px;
   z-index: 1;
 }
 
-.three{
-  top:55px;
+.three {
+  top: 55px;
   z-index: 3;
 }
 
-.four{
-  top:100px;
+.four {
+  top: 100px;
   z-index: 4;
 }
 
-.five{
+.five {
   /* display: none; */
   display: inline;
   z-index: 5;
-  top:320px;
+  /* top:320px; */
+  bottom: 10%;
   width: 10%;
   right: 46vw;
 }
-.five1{
-  display:none;
+
+.five1 {
+  display: none;
   z-index: 5;
-  top:250px;
-  width: 38%;
-  right: 380px;
-}
-.five2{
-  display:none;
-  z-index: 5;
-  top:250px;
-  width: 35%;
-  right: 420px;
-}
-.five3{
-  display:none;
-  z-index: 5;
-  top:250px;
-  width: 35%;
-  right: 420px;
+  top: 250px;
+  width: 30%;
+  left: 35%;
 }
 
-.six{
+.five2 {
+  display: none;
+  z-index: 5;
+  top: 39%;
+  width: 30%;
+  left: 35%;
+}
+
+.five3 {
+  display: none;
+  z-index: 5;
+  top: 38%;
+  width: 30%;
+  left: 34%;
+}
+
+.six {
   display: none;
   z-index: 6;
-  top:200px;
-  width: 23%;
-  right: 620px;
+  top: 31%;
+  width: 20%;
+  left: 31%;
 }
 
-.six1{
-  display:none;
+.six1 {
+  display: none;
   transform: rotate(20deg);
   z-index: 6;
-  top:400px;
+  top: 60%;
   width: 25%;
-  right: 420px;
+  left: 38%;
 }
 
-.six2{
-  display:none;
+.six2 {
+  display: none;
   z-index: 6;
-  top:440px;
-  width: 20%;
-  right: 600px;
+  bottom: 15%;
+  width: 15%;
+  left: 39%;
+  transform: rotate(22deg);
 }
 
-
-.blue{
-  background-color:blue;
+.blue {
+  background-color: blue;
   height: 33vh;
 }
 
-
-
-
 /* Srorejs class */
 
-.store1{
-  width:88%;
-  right:120px;
+.store1 {
+  width: 88%;
+  right: 120px;
 }
 
 .store2 {
@@ -172,76 +185,68 @@ video {
   width: 37%;
   right: 441px;
   top: 160px;
-
 }
-
 
 .store3 {
   /* display: none; */
   width: 33%;
   right: 734px;
   height: 500px;
-  top:22px;
-
+  top: 22px;
 }
 
 .store4 {
   /* display: none; */
   width: 46%;
-right: 170px;
-height: 500px;
-
+  right: 170px;
+  height: 500px;
 }
 
 .store5l {
   /* display: none; */
-  width: 26%;
-    left: 0px;
-    height: 530px;
-    top: 73px;
-
+  top: 31%;
+  width: 20%;
+  left: 31%;
 }
 
 .store5r {
   /* display: none; */
   width: 23%;
-right: 127px;
-height: 530px;
-top: 14px;
-
+  right: 127px;
+  height: 530px;
+  top: 14px;
 }
 
 .store6l {
   /* display: none; */
   width: 22%;
-      left: 232px;
-      top: 280px;
-      z-index: 2;
+  left: 232px;
+  top: 280px;
+  z-index: 2;
 }
 
 .store6m {
   /* display: none; */
   width: 26%;
-top: 300px;
-right: 457px;
-z-index: 6;
-
+  top: 300px;
+  right: 457px;
+  z-index: 6;
 }
+
 .store6r {
   /* display: none; */
   width: 23%;
   top: 260px;
   right: 161px;
   z-index: 2;
-
 }
 
 .store7l {
   /* display: none; */
   width: 19%;
-LEFT: 232px;
-top: 250px;
-z-index: 2;
+  LEFT: 232px;
+  top: 250px;
+  z-index: 2;
 }
 
 .store7r {
@@ -254,25 +259,22 @@ z-index: 2;
 
 .store8l {
   display: none;
-
 }
 
 .store8r {
   display: none;
-
 }
 
 .store9 {
   /* display: none; */
   width: 88%;
-/* bottom: -34px; */
-left: 53px;
-z-index: 1;
+  /* bottom: -34px; */
+  left: 53px;
+  z-index: 1;
 }
 
 .store101l {
   display: none;
-
 }
 
 .store101m {
@@ -280,8 +282,6 @@ z-index: 1;
   width: 6%;
   top: 486px;
   left: 503px;
-
-
 }
 
 .store10l {
@@ -290,79 +290,80 @@ z-index: 1;
   left: 110px;
   /* bottom: 0px; */
   z-index: 2;
-  top:392px;
+  top: 392px;
 }
 
 .store10r {
   /* display: none; */
   width: 13%;
-/* bottom: 0px; */
-right: 379px;
-top:425px;
-
+  /* bottom: 0px; */
+  right: 379px;
+  top: 425px;
 }
 
 .store11 {
   display: none;
   z-index: 6;
-    /* bottom: 70px; */
-    top: 108px;
-
+  /* bottom: 70px; */
+  top: 108px;
 }
+
 .store12 {
   display: none;
   z-index: 6;
-    /* bottom: 70px; */
-    right: 350px;
-    top: 108px;
-
-}
-.store13 {
-  display: none;
-  z-index: 6;
-    /* bottom: 70px; */
+  /* bottom: 70px; */
   right: 350px;
   top: 108px;
 }
 
+.store13 {
+  display: none;
+  z-index: 6;
+  /* bottom: 70px; */
+  right: 350px;
+  top: 108px;
+}
 
-.kiosk{
-  width:100%;
+.kiosk {
+  width: 100%;
   height: 98%;
 }
 
-.bugerBar{
+.bugerBar {
   background-color: #99ffff;
-  width:100%;
+  width: 100%;
 }
 
-.burger-shop{
+.burger-shop {
   width: 50%;
-  height:99vh;
+  height: 99vh;
 }
 
-.burger1{
+.burger1 {
   position: absolute;
   top: 11%;
   width: 131px;
   height: 78px;
   left: 428px;
 }
-.burger2{
+
+.burger2 {
   position: absolute;
   top: 11%;
   width: 131px;
   height: 78px;
   left: 595px;
 }
-.burger3{
+
+.burger3 {
   position: absolute;
   top: 11%;
   width: 141px;
   height: 78px;
   left: 771px;
 }
-.choose{
+
+.choose {
   display: none;
   width: 19%;
   position: absolute;
@@ -370,7 +371,7 @@ top:425px;
   left: 44%;
 }
 
-.pay{
+.pay {
   display: none;
   width: 10%;
   position: absolute;
@@ -378,21 +379,20 @@ top:425px;
   right: 23%;
 }
 
-.order{
+.order {
   width: 100%;
   display: none;
 }
 
-.exit{
+.exit {
   position: absolute;
   width: 9%;
   top: 31%;
   transform: rotate(-18deg);
   left: 26%;
-
 }
 
-.close-kiosk{
+.close-kiosk {
   position: absolute;
   top: 12%;
   z-index: 2;
@@ -401,7 +401,7 @@ top:425px;
   transform: rotate(-10deg);
 }
 
-.portal{
+.portal {
   position: absolute;
   width: 200px;
   top: 88%;
@@ -409,16 +409,68 @@ top:425px;
   z-index: 11;
 }
 
-.tuhutz{
-  width:100%;
-  max-height:100px;
+.tuhutz {
+  width: 100%;
+  max-height: 100px;
 }
 
-.karl{
+.karl {
   width: 100%;
 }
 
-.karl-bio{
-  color:white;
+.karl-bio {
+  color: white;
   padding: 0 !important;
+}
+
+@media (max-width: 560px) {
+  .logo {
+    width: 100%;
+    height: auto;
+    top: 0%;
+    left: 0;
+  }
+  .five {
+    bottom: 10%;
+    width: 35%;
+    right: 35%;
+  }
+  .music {
+    width: 20%;
+    position: absolute;
+    left: 1%;
+    bottom: 7%;
+  }
+  .portal {
+    width: 40%;
+    bottom: 2%;
+    left: 30%;
+  }
+  .five1, .five2, .five3 {
+    top: 42%;
+    width: 120%;
+    left: -15%;
+  }
+  .six {
+    top: 47%;
+    width: 60%;
+    left: 0%;
+  }
+  .six1 {
+    width: 100%;
+    left: 0;
+  }
+  .five2 {
+    left: -10%;
+  }
+  .six2 {
+    bottom: 11%;
+    width: 65%;
+    -webkit-transform: rotate(22deg);
+    transform: rotate(30deg);
+    left: 5%;
+  }
+  .five3{
+    top: 36%;
+  }
 }

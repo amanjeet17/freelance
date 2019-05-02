@@ -1,10 +1,61 @@
 .App1 {
   text-align: center;
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background: #ff66ff;
 }
 
-.black{
-  background:black;
+.black {
+  background: black;
   height: 50vh;
+}
+
+.storeBackground {
+  width: 85%;
+  position: absolute;
+  top: 0;
+  left: 7%;
+}
+
+@media (max-width: 560px) {
+  .storeBackground {
+    width: 113%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+  .store6l {
+    width: 57%;
+    left: 0%;
+    top: 35%;
+  }
+  .store6r {
+    width: 70%;
+    top: 43%;
+    right: -2%;
+  }
+  .store7l {
+    width: 42%;
+    left: 5%;
+    top: 34%;
+  }
+  .store7r {
+    width: 50%;
+    right: 5%;
+    top: 40%;
+  }
+  .store10l {
+    width: 30%;
+    left: 70%;
+    top: 60%;
+    z-index: 2;
+    transform: scaleX(-1);
+  }
+  .store6m {
+    width: 65%;
+    top: 61%;
+    right: 37%;
+    z-index: 6;
+  }
 }
