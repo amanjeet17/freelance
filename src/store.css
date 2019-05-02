@@ -90,6 +90,10 @@
   font-size: 4rem;
   z-index: 999;
 }
+.overflowScrollModal {
+  max-height: 90vh;
+  overflow: auto;
+}
 
 @media (max-width: 560px) {
   .storeBackground {

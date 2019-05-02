@@ -33,6 +33,33 @@ import paintings from './assets/store/portal/paintings.png';
 import sculpture from './assets/store/portal/sculpture.png';
 import ReactAudioPlayer from 'react-audio-player';
 
+import sculpture1 from './assets/sculpture/firstworldjammin.jpg';
+import sculpture2 from './assets/sculpture/firstworldjammin_2.jpg'
+import sculpture3 from './assets/sculpture/firstworldjammin_3.jpg'
+import sculpture4 from './assets/sculpture/Greatspirit_1.jpg'
+import sculpture5 from './assets/sculpture/Greatspirit_2.jpg'
+import sculpture6 from './assets/sculpture/Greatspirit_3.jpg'
+
+import painting1 from './assets/paintings/alpine.jpg';
+import painting2 from './assets/paintings/basura.jpg';
+import painting3 from './assets/paintings/BLUESQ.jpg';
+import painting4 from './assets/paintings/BOOMTOWN.jpg';
+import painting5 from './assets/paintings/bug.jpg';
+import painting6 from './assets/paintings/ELOCEANO.jpg';
+
+import hat1 from './assets/hats/hatzs.png';
+import hat2 from './assets/hats/hatzs_1.jpg';
+import hat3 from './assets/hats/hatzs_2.jpg';
+import hat4 from './assets/hats/hatzs_3.jpg';
+import hat5 from './assets/hats/hatzs_4.jpg';
+import hat6 from './assets/hats/model_1.jpg';
+import hat7 from './assets/hats/model_2.jpg';
+import hat8 from './assets/hats/model_3.jpg';
+import hat9 from './assets/hats/model_4.jpg';
+import hat10 from './assets/hats/model_5.jpg';
+
+import video1 from './assets/films/SampleVideo.mp4';
+
 import audio from './assets/audio/sound.ogg';
 import background from './assets/store/final/Newworld_desktop.png'
 import backgroundMobile from './assets/store/final/Newworld_mobile.png'
@@ -42,9 +69,7 @@ class Store extends Component {
   constructor(props) {
     super(props);
     this.audioRef = React.createRef();
-    this.state = {
-      play: false
-    }
+    this.state = { play: false }
   }
 
   componentDidMount() {
@@ -176,12 +201,42 @@ class Store extends Component {
             <div className="modal-content">
               <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
               <div className="modal-body">
-                <img src={tuhutz} className="tuhutz" id="tuhutz" data-toggle="modal"
-                  data-dismiss="modal" data-target="#tuhutzss" onClick={this.tuhutz} />
-                <img src={sculpture} className="tuhutz" id="order2" />
-                <img src={paintings} className="tuhutz" id="order1" />
-                <img src={hatzs} className="tuhutz" id="order1" />
-                <img src={Films} className="tuhutz" id="order1" />
+                <img
+                  src={tuhutz}
+                  className="tuhutz"
+                  id="tuhutz"
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  data-target="#tuhutzss"
+                  onClick={this.tuhutz} />
+                <img
+                  src={sculpture}
+                  className="tuhutz"
+                  id="order2"
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  data-target="#sculptureModal" />
+                <img 
+                  src={paintings} 
+                  className="tuhutz" 
+                  id="order1" 
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  data-target="#paintingModal" />
+                <img 
+                  src={hatzs}
+                  className="tuhutz" 
+                  id="order1" 
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  data-target="#hatsModal"/>
+                <img 
+                  src={Films} 
+                  className="tuhutz" 
+                  id="order1" 
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  data-target="#filmsModal"/>
                 <img src={contribute} className="tuhutz" data-toggle="modal"
                   data-dismiss="modal" data-target="#contribute" id="order1" onClick={this.contribute} />
               </div>
@@ -248,6 +303,147 @@ class Store extends Component {
                 </div>
                 <br />
                 <img src={upparrows} style={{ textAlign: "center", width: "20%" }} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sculptureModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content non-radius non-border">
+                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+                <div id="myGallery" class="carousel slide" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src={sculpture1} alt="image for sculpture 1" />
+                    </div>
+                    <div class="item">
+                      <img src={sculpture2} alt="image for sculpture 2" />
+                    </div>
+                    <div class="item">
+                      <img src={sculpture3} alt="image for sculpture 3" />
+                    </div>
+                    <div class="item">
+                      <img src={sculpture4} alt="image for sculpture 4" />
+                    </div>
+                    <div class="item">
+                      <img src={sculpture5} alt="image for sculpture 5" />
+                    </div>
+                    <div class="item">
+                      <img src={sculpture6} alt="image for sculpture 6" />
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myGallery" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                  <a class="right carousel-control" href="#myGallery" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="paintingModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content non-radius non-border">
+                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+                <div id="paintingCarousel" class="carousel slide" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src={painting1} alt="image for painting 1" />
+                    </div>
+                    <div class="item">
+                      <img src={painting2} alt="image for painting 2" />
+                    </div>
+                    <div class="item">
+                      <img src={painting3} alt="image for painting 3" />
+                    </div>
+                    <div class="item">
+                      <img src={painting4} alt="image for painting 4" />
+                    </div>
+                    <div class="item">
+                      <img src={painting5} alt="image for painting 5" />
+                    </div>
+                    <div class="item">
+                      <img src={painting6} alt="image for painting 6" />
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#paintingCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                  <a class="right carousel-control" href="#paintingCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="hatsModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content non-radius non-border">
+                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+                <div id="hatCarousel" class="carousel slide" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src={hat1} alt="image for hat 1" />
+                    </div>
+                    <div class="item">
+                      <img src={hat2} alt="image for hat 2" />
+                    </div>
+                    <div class="item">
+                      <img src={hat3} alt="image for hat 3" />
+                    </div>
+                    <div class="item">
+                      <img src={hat4} alt="image for hat 4" />
+                    </div>
+                    <div class="item">
+                      <img src={hat5} alt="image for hat 5" />
+                    </div>
+                    <div class="item">
+                      <img src={hat6} alt="image for hat 6" />
+                    </div>
+                    <div class="item">
+                      <img src={hat7} alt="image for hat 7" />
+                    </div>
+                    <div class="item">
+                      <img src={hat8} alt="image for hat 8" />
+                    </div>
+                    <div class="item">
+                      <img src={hat9} alt="image for hat 9" />
+                    </div>
+                    <div class="item">
+                      <img src={hat10} alt="image for hat 10" />
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#hatCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                  <a class="right carousel-control" href="#hatCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="filmsModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content non-radius non-border">
+                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+                <div id="filmsCarousel" class="carousel slide" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                     <video src={video1} autoPlay={true} muted={true} loop={true} type="video/mp4"></video>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#filmsCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                  <a class="right carousel-control" href="#filmsCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
               </div>
             </div>
           </div>
