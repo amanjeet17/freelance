@@ -85,11 +85,11 @@ class Store extends Component {
 
         <div className="container-fluid">
           <div>
-            <img 
-              className="storeBackground" 
+            <img
+              className="storeBackground"
               src={window.screen.width > 560 ? background : backgroundMobile} />
           </div>
-       
+
           <div>
             <a href="/burger">
               <img src={store6l} className="images store6l" /></a>
@@ -136,8 +136,10 @@ class Store extends Component {
             <img src={portal} className="portal" data-toggle="modal" data-target="#myModal" id="portal" />
           </div>
           <div>
-
             <img src={store13} className="images store13" id="store13" />
+          </div>
+          <div>
+            <img src="/static/media/music.9226b6e5.png" class="music " id="music" />
           </div>
         </div>
         {/* <div className="black"></div> */}

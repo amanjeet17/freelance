@@ -1,0 +1,61 @@
+.bugerBar .burger-shop {
+    width: 50%;
+    height: 100vh;
+}
+
+.bugerBar .burger1, .bugerBar .burger2, .bugerBar .burger3 {
+    top: 11%;
+    width: 9%;
+    height: 11%;
+    cursor: pointer;
+}
+
+.bugerBar .burger1 {
+    left: 34%;
+}
+
+.bugerBar .burger2 {
+    left: 44%;
+}
+
+.bugerBar .burger3 {
+    left: 56%;
+}
+
+@media (max-width: 560px) {
+    .bugerBar .burger1, .bugerBar .burger2, .bugerBar .burger3 {
+        width: 45%;
+    }
+    .bugerBar .burger1, .bugerBar .burger2 {
+        top: 5%;
+    }
+    .bugerBar .burger-shop {
+        width: 110%;
+        height: 100vh;
+        left: -5%;
+        position: relative;
+    }
+    .bugerBar .burger1 {
+        left: 2%;
+    }
+    .bugerBar .burger2 {
+        left: 55%;
+    }
+    .bugerBar .burger3 {
+        left: 30%;
+        top: 20%;
+    }
+    .pay {
+        width: 25%;
+        position: absolute;
+        top: 39%;
+        right: 28%;
+    }
+    .exit {
+        width: 25%;
+        top: 45%;
+        -webkit-transform: rotate(-41deg);
+        transform: rotate(-41deg);
+        left: 0%;
+    }
+}
