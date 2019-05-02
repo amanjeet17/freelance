@@ -19,6 +19,9 @@ import exit from './assets/burger-bar/3.png';
 
 var once = true;
 class BurgerShop extends Component {
+  state = {
+    canPay: false
+  }
   componentDidMount() {
     var list = document.getElementsByTagName("audio")[0]
     list.classList.add("mystyle")
@@ -42,19 +45,22 @@ class BurgerShop extends Component {
       }, 1000)
       document.getElementById("choose").style.display = "inline";
       once = false;
+      this.setState({ canPay: true });
     }
   }
 
   burgerchoosen = (order) => {
-    document.getElementsByClassName('react-audio-player ')[1].muted = false
-    setTimeout(() => {
-      document.getElementsByClassName('react-audio-player ')[1].loop = false
-    }, 3000)
-    document.getElementById("choose").style.display = "none"
-    document.getElementById("pay").style.display = "inline"
-    document.getElementById(order).style.display = "inline"
-
+    if (this.state.canPay) {
+      document.getElementsByClassName('react-audio-player ')[1].muted = false
+      setTimeout(() => {
+        document.getElementsByClassName('react-audio-player ')[1].loop = false
+      }, 3000)
+      document.getElementById("choose").style.display = "none"
+      document.getElementById("pay").style.display = "inline"
+      document.getElementById(order).style.display = "inline"
+    }
   }
+ 
 
   paynow = () => {
     document.getElementsByClassName('react-audio-player ')[2].muted = false
@@ -65,6 +71,7 @@ class BurgerShop extends Component {
 
   render() {
     return (
+      <React.Fragment>
       <div className="App bugerBar">
         <ReactAudioPlayer
           src={order}
@@ -90,7 +97,7 @@ class BurgerShop extends Component {
             : <img src={burgerbarMobile} className="burger-shop" onClick={this.Choose} />
           }
 
-          <div >
+          <div>
             <img src={combo1} className="burger1" onClick={() => this.burgerchoosen("order1")} />
           </div>
           <div >
@@ -106,16 +113,16 @@ class BurgerShop extends Component {
             <img src={pay} className="pay" id="pay" data-toggle="modal" data-target="#myModal" onClick={this.paynow} />
           </div>
           <div>
-            <img src={exit} className="exit" id="exit" />
+            <a href="/store">
+            <img src={exit} className="exit" id="exit" onClick={this.goBack}/>
+            </a>
           </div>
         </div>
-
-
-
+      </div>
         <div id="myModal" class="modal" role="dialog">
-
           <div className="modal-dialog modal-md">
             <div className="modal-content">
+            <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
               <div className="modal-body">
                 <img src={order1} className="order" id="order1" />
                 <img src={order2} className="order" id="order2" />
@@ -124,7 +131,7 @@ class BurgerShop extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

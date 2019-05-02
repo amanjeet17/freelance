@@ -84,6 +84,13 @@
   top: 60%;
 }
 
+.modalCloseButton {
+  position: absolute;
+  right: 10px;
+  font-size: 4rem;
+  z-index: 999;
+}
+
 @media (max-width: 560px) {
   .storeBackground {
     width: 113%;

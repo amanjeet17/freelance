@@ -51,11 +51,16 @@
         top: 39%;
         right: 28%;
     }
-    .exit {
+    .bugerBar .exit {
         width: 25%;
-        top: 45%;
+        top: 49%;
         -webkit-transform: rotate(-41deg);
         transform: rotate(-41deg);
-        left: 0%;
+        left: -1%;
+    }
+    .bugerBar .choose {
+        width: 30%;
+        top: 55%;
+        left: 31%;
     }
 }

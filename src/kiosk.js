@@ -12,11 +12,19 @@ class Kiosk extends Component {
 
   render() {
     return (
-      <div className="App">
-        <img 
-          src={window.screen.width > 560 ? kiosk : kioskMobile} 
+      <div className="App kiosk">
+        <img
+          src={window.screen.width > 560 ? kiosk : kioskMobile}
           className="kiosk" />
         <img src={close} className="close-kiosk" />
+        <div>
+          <img src="/static/media/music.9226b6e5.png" class="music " id="music" />
+        </div>
+        <div>
+          <a href="/store">
+            <img src="/static/media/3.a8712964.png" class="exit" id="exit" />
+          </a>
+        </div>
       </div>
     );
   }

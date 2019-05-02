@@ -33,6 +33,7 @@ import paintings from './assets/store/portal/paintings.png';
 import sculpture from './assets/store/portal/sculpture.png';
 import ReactAudioPlayer from 'react-audio-player';
 
+
 import background from './assets/store/final/Newworld_desktop.png'
 import backgroundMobile from './assets/store/final/Newworld_mobile.png'
 
@@ -74,6 +75,7 @@ class Store extends Component {
 
   render() {
     return (
+      <React.Fragment>
       <div className="App1">
         <ReactAudioPlayer
           src='http://goldfirestudios.com/proj/howlerjs/sound.ogg'
@@ -143,10 +145,11 @@ class Store extends Component {
           </div>
         </div>
         {/* <div className="black"></div> */}
+      </div>
         <div id="myModal" class="modal fade" role="dialog">
-
           <div className="modal-dialog modal-md">
             <div className="modal-content">
+            <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
               <div className="modal-body">
                 <img src={tuhutz} className="tuhutz" id="tuhutz" data-toggle="modal"
                   data-dismiss="modal" data-target="#tuhutzss" onClick={this.tuhutz} />
@@ -163,7 +166,6 @@ class Store extends Component {
 
 
         <div id="tuhutzss" class="modal fade " role="dialog">
-
           <div className="modal-dialog modal-md">
             <div className="modal-content">
               <div className="modal-body karl-bio">
@@ -201,7 +203,6 @@ class Store extends Component {
         </div>
 
         <div id="contribute" class="modal fade" role="dialog">
-
           <div className="modal-dialog modal-md">
             <div className="modal-content">
               <div className="modal-body">
@@ -227,8 +228,7 @@ class Store extends Component {
           </div>
         </div>
 
-
-      </div>
+      </React.Fragment>
     );
   }
 }
