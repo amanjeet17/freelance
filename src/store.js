@@ -33,17 +33,25 @@ import paintings from './assets/store/portal/paintings.png';
 import sculpture from './assets/store/portal/sculpture.png';
 import ReactAudioPlayer from 'react-audio-player';
 
-
+import audio from './assets/audio/sound.ogg';
 import background from './assets/store/final/Newworld_desktop.png'
 import backgroundMobile from './assets/store/final/Newworld_mobile.png'
 
 class Store extends Component {
 
+  constructor(props) {
+    super(props);
+    this.audioRef = React.createRef();
+    this.state = {
+      play: false
+    }
+  }
+
   componentDidMount() {
     var list = document.getElementsByTagName("audio")[0]
     list.classList.add("mystyle")
     // console.log("audios tag",list)
-    document.getElementsByClassName('react-audio-player ')[0].loop = true
+    // document.getElementsByClassName('react-audio-player ')[0].loop = true
   }
 
   click1 = () => {
@@ -73,83 +81,100 @@ class Store extends Component {
     document.getElementById("myModal").style.display = "none"
   }
 
+  playAudio = (audioref) => {
+    if (this.state.play) {
+      audioref.current.currentTime = 0;
+      audioref.current.play();
+    } else {
+      audioref.current.pause();
+    }
+    this.setState((prevState) => ({ play: !prevState.play }));
+  }
+
   render() {
     return (
       <React.Fragment>
-      <div className="App1">
-        <ReactAudioPlayer
+        <div className="App1">
+          {/* <ReactAudioPlayer
           src='http://goldfirestudios.com/proj/howlerjs/sound.ogg'
           autoPlay
           controls
           ref={(element) => { this.rap = element; }}
-        />
-        <div className="black"></div>
+        /> */}
+          <div className="black"></div>
+          <audio
+            src={audio}
+            loop={true}
+            ref={this.audioRef}></audio>
+          <div className="container-fluid">
+            <div>
+              <img
+                className="storeBackground"
+                src={window.screen.width > 560 ? background : backgroundMobile} />
+            </div>
 
-        <div className="container-fluid">
-          <div>
-            <img
-              className="storeBackground"
-              src={window.screen.width > 560 ? background : backgroundMobile} />
+            <div>
+              <a href="/burger">
+                <img src={store6l} className="images store6l" /></a>
+            </div>
+            <div>
+              <a href="http://www.tuhutzs.com/#/vending-machine">
+                <img src={store6m} className="images store6m" /></a>
+            </div>
+            <div>
+              <a href="/kiosk">
+                <img src={store6r} className="images store6r" /></a>
+            </div>
+            <div>
+              <img src={store7l} className="images store7l" />
+            </div>
+            <div>
+              <img src={store7r} className="images store7r" />
+            </div>
+            <div>
+              <img src={store8l} className="images store8l" />
+            </div>
+            <div>
+              <img src={store8r} className="images store8r" />
+            </div>
+            <div>
+              <img src={store101l} className="images store101l" />
+            </div>
+            <div>
+              <img src={store101m} className="images store101m" />
+            </div>
+            <div>
+              <img src={store10l} className="images store10l" id="store10l" onClick={this.click1} />
+            </div>
+            <div>
+              <img src={store10r} className="images store10r" />
+            </div>
+            <div>
+              <img src={store11} className="images store11" id="store11" onClick={this.click2} />
+            </div>
+            <div>
+              <img src={store12} className="images store12" id="store12" onClick={this.click3} />
+            </div>
+            <div>
+              <img src={portal} className="portal" data-toggle="modal" data-target="#myModal" id="portal" />
+            </div>
+            <div>
+              <img src={store13} className="images store13" id="store13" />
+            </div>
+            <div>
+              <img
+                src="/static/media/music.9226b6e5.png"
+                class="music "
+                id="music"
+                onClick={() => this.playAudio(this.audioRef)} />
+            </div>
           </div>
-
-          <div>
-            <a href="/burger">
-              <img src={store6l} className="images store6l" /></a>
-          </div>
-          <div>
-            <a href="http://www.tuhutzs.com/#/vending-machine">
-              <img src={store6m} className="images store6m" /></a>
-          </div>
-          <div>
-            <a href="/kiosk">
-              <img src={store6r} className="images store6r" /></a>
-          </div>
-          <div>
-            <img src={store7l} className="images store7l" />
-          </div>
-          <div>
-            <img src={store7r} className="images store7r" />
-          </div>
-          <div>
-            <img src={store8l} className="images store8l" />
-          </div>
-          <div>
-            <img src={store8r} className="images store8r" />
-          </div>
-          <div>
-            <img src={store101l} className="images store101l" />
-          </div>
-          <div>
-            <img src={store101m} className="images store101m" />
-          </div>
-          <div>
-            <img src={store10l} className="images store10l" id="store10l" onClick={this.click1} />
-          </div>
-          <div>
-            <img src={store10r} className="images store10r" />
-          </div>
-          <div>
-            <img src={store11} className="images store11" id="store11" onClick={this.click2} />
-          </div>
-          <div>
-            <img src={store12} className="images store12" id="store12" onClick={this.click3} />
-          </div>
-          <div>
-            <img src={portal} className="portal" data-toggle="modal" data-target="#myModal" id="portal" />
-          </div>
-          <div>
-            <img src={store13} className="images store13" id="store13" />
-          </div>
-          <div>
-            <img src="/static/media/music.9226b6e5.png" class="music " id="music" />
-          </div>
+          {/* <div className="black"></div> */}
         </div>
-        {/* <div className="black"></div> */}
-      </div>
         <div id="myModal" class="modal fade" role="dialog">
           <div className="modal-dialog modal-md">
             <div className="modal-content">
-            <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
+              <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
               <div className="modal-body">
                 <img src={tuhutz} className="tuhutz" id="tuhutz" data-toggle="modal"
                   data-dismiss="modal" data-target="#tuhutzss" onClick={this.tuhutz} />
