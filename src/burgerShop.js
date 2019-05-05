@@ -38,15 +38,15 @@ class BurgerShop extends Component {
   }
 
   Choose = () => {
-    if (once) {
+    // if (once) {
       document.getElementsByClassName('react-audio-player ')[0].muted = false
       setTimeout(() => {
         document.getElementsByClassName('react-audio-player ')[0].loop = false
       }, 1000)
       document.getElementById("choose").style.display = "inline";
-      once = false;
+      // once = false;
       this.setState({ canPay: true });
-    }
+    // }
   }
 
   burgerchoosen = (order) => {
@@ -58,11 +58,13 @@ class BurgerShop extends Component {
       document.getElementById("choose").style.display = "none"
       document.getElementById("pay").style.display = "inline"
       document.getElementById(order).style.display = "inline"
-    }
+    } 
   }
  
 
   paynow = () => {
+    document.getElementById("choose").style.display = "none";
+    document.getElementById("pay").style.display = "none";
     document.getElementsByClassName('react-audio-player ')[2].muted = false
     setTimeout(() => {
       document.getElementsByClassName('react-audio-player ')[2].loop = false

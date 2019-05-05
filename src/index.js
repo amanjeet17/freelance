@@ -7,6 +7,7 @@ import Kiosk from './kiosk';
 import BurgerShop from './burgerShop';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter,Route } from 'react-router-dom';
+import Basura from './basura';
 
 const routes =(
 <BrowserRouter>
@@ -15,6 +16,7 @@ const routes =(
   <Route exact path="/store" component={Store} />
   <Route exact path="/kiosk" component={Kiosk} />
   <Route exact path="/burger" component={BurgerShop} />
+  <Route exact path="/basura" component={Basura} />
 </div>
 
 </BrowserRouter>)

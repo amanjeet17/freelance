@@ -69,7 +69,7 @@ class Store extends Component {
   constructor(props) {
     super(props);
     this.audioRef = React.createRef();
-    this.state = { play: false }
+    this.state = { play: true }
   }
 
   componentDidMount() {
@@ -133,9 +133,11 @@ class Store extends Component {
             ref={this.audioRef}></audio>
           <div className="container-fluid">
             <div>
-              <img
-                className="storeBackground"
-                src={window.screen.width > 560 ? background : backgroundMobile} />
+              <a href="/basura">
+                <img
+                  className="storeBackground"
+                  src={window.screen.width > 560 ? background : backgroundMobile} />
+              </a>
             </div>
 
             <div>
@@ -216,27 +218,27 @@ class Store extends Component {
                   data-toggle="modal"
                   data-dismiss="modal"
                   data-target="#sculptureModal" />
-                <img 
-                  src={paintings} 
-                  className="tuhutz" 
-                  id="order1" 
+                <img
+                  src={paintings}
+                  className="tuhutz"
+                  id="order1"
                   data-toggle="modal"
                   data-dismiss="modal"
                   data-target="#paintingModal" />
-                <img 
+                <img
                   src={hatzs}
-                  className="tuhutz" 
-                  id="order1" 
+                  className="tuhutz"
+                  id="order1"
                   data-toggle="modal"
                   data-dismiss="modal"
-                  data-target="#hatsModal"/>
-                <img 
-                  src={Films} 
-                  className="tuhutz" 
-                  id="order1" 
+                  data-target="#hatsModal" />
+                <img
+                  src={Films}
+                  className="tuhutz"
+                  id="order1"
                   data-toggle="modal"
                   data-dismiss="modal"
-                  data-target="#filmsModal"/>
+                  data-target="#filmsModal" />
                 <img src={contribute} className="tuhutz" data-toggle="modal"
                   data-dismiss="modal" data-target="#contribute" id="order1" onClick={this.contribute} />
               </div>
@@ -311,8 +313,8 @@ class Store extends Component {
         <div id="sculptureModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content non-radius non-border">
-                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
-              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+              <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{ paddingTop: '38px' }}>
                 <div id="myGallery" class="carousel slide" data-interval="false">
                   <div class="carousel-inner">
                     <div class="item active">
@@ -347,8 +349,8 @@ class Store extends Component {
         <div id="paintingModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content non-radius non-border">
-                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
-              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+              <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{ paddingTop: '38px' }}>
                 <div id="paintingCarousel" class="carousel slide" data-interval="false">
                   <div class="carousel-inner">
                     <div class="item active">
@@ -383,8 +385,8 @@ class Store extends Component {
         <div id="hatsModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content non-radius non-border">
-                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
-              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+              <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{ paddingTop: '38px' }}>
                 <div id="hatCarousel" class="carousel slide" data-interval="false">
                   <div class="carousel-inner">
                     <div class="item active">
@@ -431,12 +433,12 @@ class Store extends Component {
         <div id="filmsModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content non-radius non-border">
-                <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
-              <div class="modal-body overflowScrollModal" style={{paddingTop: '38px'}}>
+              <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
+              <div class="modal-body overflowScrollModal" style={{ paddingTop: '38px' }}>
                 <div id="filmsCarousel" class="carousel slide" data-interval="false">
                   <div class="carousel-inner">
                     <div class="item active">
-                     <video src={video1} autoPlay={true} muted={true} loop={true} type="video/mp4"></video>
+                      <video src={video1} autoPlay={true} muted={true} loop={true} type="video/mp4"></video>
                     </div>
                   </div>
                   <a class="left carousel-control" href="#filmsCarousel" role="button" data-slide="prev">

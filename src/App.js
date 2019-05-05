@@ -14,17 +14,24 @@ import six1 from './assets/61.png';
 import six2 from './assets/62.png';
 import music from './assets/music.png';
 
+import audio from './assets/audio/sound.ogg';
 import background from './assets/home/Courtside_desktop.png'
 import backgroundMobile from './assets/home/Courtside_mobile.png'
 
 var once = true;
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.audioRef = React.createRef();
+    this.state = { play: true }
+  }
+
   componentDidMount() {
     var list = document.getElementsByTagName("audio")[0]
     list.classList.add("mystyle")
     // console.log("audios tag",list)
-    document.getElementsByClassName('react-audio-player ')[0].loop = true
+    // document.getElementsByClassName('react-audio-player ')[0].loop = true
   }
 
   soundmute = () => {
@@ -73,16 +80,29 @@ class App extends Component {
     let path = `/store`;
     this.props.history.push("/store")
   }
+  playAudio = (audioref) => {
+    if (this.state.play) {
+      audioref.current.currentTime = 0;
+      audioref.current.play();
+    } else {
+      audioref.current.pause();
+    }
+    this.setState((prevState) => ({ play: !prevState.play }));
+  }
 
   render() {
     return (
       <div className="App">
-        <ReactAudioPlayer
+        {/* <ReactAudioPlayer
           src='http://goldfirestudios.com/proj/howlerjs/sound.ogg'
           autoPlay
           controls
           ref={(element) => { this.rap = element; }}
-        />
+        /> */}
+         <audio
+            src={audio}
+            loop={true}
+            ref={this.audioRef}></audio>
         <div className="blue"></div>
         <div className="container">
           <div>
@@ -114,7 +134,7 @@ class App extends Component {
             </a>
           </div>
           <div>
-            <img src={music} className="music " id="music" onClick={this.soundmute} />
+            <img src={music} className="music " id="music" onClick={() => this.playAudio(this.audioRef)} />
           </div>
           <div><img src="/static/media/portal.63d0b8bd.png" class="portal" data-toggle="modal" data-target="#myModal" id="portal" /></div>
         </div>
