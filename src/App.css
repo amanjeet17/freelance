@@ -387,9 +387,19 @@
 .exit {
   position: absolute;
   width: 9%;
-  top: 31%;
+  top: 29%;
   transform: rotate(-18deg);
-  left: 26%;
+  left: 29%;
+}
+@media (max-width:1920px) and (min-width:1400px){
+  .exit{
+    position: absolute;
+    width: 8%;
+    top: 30%;
+    -webkit-transform: rotate(-18deg);
+    transform: rotate(-26deg);
+    left: 27%;
+  }
 }
 
 .close-kiosk {
@@ -415,7 +425,8 @@
 }
 
 .karl {
-  width: 100%;
+  float:right;
+  width: 50%;
 }
 
 .karl-bio {

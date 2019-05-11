@@ -8,6 +8,8 @@ import BurgerShop from './burgerShop';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter,Route } from 'react-router-dom';
 import Basura from './basura';
+import InsideBasura from './insideBasura';
+import Future from './future';
 
 const routes =(
 <BrowserRouter>
@@ -17,6 +19,8 @@ const routes =(
   <Route exact path="/kiosk" component={Kiosk} />
   <Route exact path="/burger" component={BurgerShop} />
   <Route exact path="/basura" component={Basura} />
+  <Route exact path="/insidebasura" component={InsideBasura} />
+  <Route exact path="/future" component={Future} />
 </div>
 
 </BrowserRouter>)

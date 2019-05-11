@@ -13,10 +13,11 @@ import six from './assets/6.png';
 import six1 from './assets/61.png';
 import six2 from './assets/62.png';
 import music from './assets/music.png';
-
 import audio from './assets/audio/sound.ogg';
 import background from './assets/home/Courtside_desktop.png'
 import backgroundMobile from './assets/home/Courtside_mobile.png'
+
+
 
 var once = true;
 class App extends Component {
@@ -106,9 +107,11 @@ class App extends Component {
         <div className="blue"></div>
         <div className="container">
           <div>
+          <a href="/basura">
             <img
               className="logo"
               src={window.screen.width > 560 ? background : backgroundMobile} />
+          </a>
           </div>
           <div>
             <img src={five} className="images five" id="five" onClick={this.click1} />
@@ -134,10 +137,11 @@ class App extends Component {
             </a>
           </div>
           <div>
-            <img src={music} className="music " id="music" onClick={() => this.playAudio(this.audioRef)} />
+            <img src={music} className="music" id="music" onClick={() => this.playAudio(this.audioRef)} />
           </div>
           <div><img src="/static/media/portal.63d0b8bd.png" class="portal" data-toggle="modal" data-target="#myModal" id="portal" /></div>
         </div>
+
 
         {/* <div >
       <img src={one} className="images one" />

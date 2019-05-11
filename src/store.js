@@ -27,7 +27,6 @@ import tuhutz from './assets/store/portal/tuhutzs.png';
 import Karl from './assets/store/portal/karl.jpg';
 import contribute from './assets/store/portal/contribute.png';
 import upparrows from './assets/store/portal/TUHUTZSBLACK.png';
-import Films from './assets/store/portal/Films.png';
 import hatzs from './assets/store/portal/hatzs.png';
 import paintings from './assets/store/portal/paintings.png';
 import sculpture from './assets/store/portal/sculpture.png';
@@ -58,7 +57,7 @@ import hat8 from './assets/hats/model_3.jpg';
 import hat9 from './assets/hats/model_4.jpg';
 import hat10 from './assets/hats/model_5.jpg';
 
-import video1 from './assets/films/SampleVideo.mp4';
+
 
 import audio from './assets/audio/sound.ogg';
 import background from './assets/store/final/Newworld_desktop.png'
@@ -133,11 +132,9 @@ class Store extends Component {
             ref={this.audioRef}></audio>
           <div className="container-fluid">
             <div>
-              <a href="/basura">
                 <img
                   className="storeBackground"
                   src={window.screen.width > 560 ? background : backgroundMobile} />
-              </a>
             </div>
 
             <div>
@@ -145,7 +142,7 @@ class Store extends Component {
                 <img src={store6l} className="images store6l" /></a>
             </div>
             <div>
-              <a href="http://www.tuhutzs.com/#/vending-machine">
+              <a href="https://www.wwdwww.com " target='_blank'>
                 <img src={store6m} className="images store6m" /></a>
             </div>
             <div>
@@ -199,7 +196,7 @@ class Store extends Component {
           {/* <div className="black"></div> */}
         </div>
         <div id="myModal" class="modal fade" role="dialog">
-          <div className="modal-dialog modal-md">
+          <div className="modal-dialog modal-sm">
             <div className="modal-content">
               <button type="button" class="close modalCloseButton" data-dismiss="modal">×</button>
               <div className="modal-body">
@@ -232,13 +229,6 @@ class Store extends Component {
                   data-toggle="modal"
                   data-dismiss="modal"
                   data-target="#hatsModal" />
-                <img
-                  src={Films}
-                  className="tuhutz"
-                  id="order1"
-                  data-toggle="modal"
-                  data-dismiss="modal"
-                  data-target="#filmsModal" />
                 <img src={contribute} className="tuhutz" data-toggle="modal"
                   data-dismiss="modal" data-target="#contribute" id="order1" onClick={this.contribute} />
               </div>
@@ -247,11 +237,12 @@ class Store extends Component {
         </div>
 
 
-        <div id="tuhutzss" class="modal fade " role="dialog">
+        <div id="tuhutzss" class="modal fade " role="dialog" style={{overflow: "scroll"}}>
           <div className="modal-dialog modal-md">
             <div className="modal-content">
               <div className="modal-body karl-bio">
-                <div className="col-xs-8">
+                <div className="col-xs-12">
+                <img src={Karl} className="karl" id="karl" />
                   Tuhutzs is the artistic name for Karl Bauer.
                   Born England, United Kingdom 04/07/1988
                   Specialising in video production Karl adopts many disciplines to describe & present his work.
@@ -276,9 +267,7 @@ class Store extends Component {
                   basic food and water, but do we really need the thousands of options and designs, left solely
                   upon an end choice that is, what can you afford to buy.
                 </div>
-                <div className="col-xs-4">
-                  <img src={Karl} className="karl" id="karl" />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -298,7 +287,7 @@ class Store extends Component {
                   <h3> Film & Photography</h3>
                   <p> Curtis Rowlands - United Kingdom - info@curtisrowland.com</p>
                   <p>Denis Mcmahon - United Kingdom - Denis.mcm@hotmail.com</p>
-                  <p> Artists & Curators</p>
+                  <h3> Artists & Curators</h3>
                   <p> Bobby Benjamin - United Kingdom - benjamithefuture@hotmail.co.uk</p>
                   <h3> Music Prodcuers</h3>
                   <p> Shxxr - Adam Trattles - United Kingdom - shxxrofficial@gmail.com</p>
@@ -430,26 +419,7 @@ class Store extends Component {
           </div>
         </div>
 
-        <div id="filmsModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content non-radius non-border">
-              <button type="button" class="close modalCloseButton" data-dismiss="modal" aria-hidden="true" >×</button>
-              <div class="modal-body overflowScrollModal" style={{ paddingTop: '38px' }}>
-                <div id="filmsCarousel" class="carousel slide" data-interval="false">
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <video src={video1} autoPlay={true} muted={true} loop={true} type="video/mp4"></video>
-                    </div>
-                  </div>
-                  <a class="left carousel-control" href="#filmsCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span></a>
-                  <a class="right carousel-control" href="#filmsCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+     
 
       </React.Fragment>
     );

@@ -3,9 +3,9 @@ import './App.css';
 import './burgerShop.css'
 import burgerbar from './assets/burger-bar/burger_Desktop.png';
 import burgerbarMobile from './assets/burger-bar/burger_Mobile.png';
-import combo1 from './assets/burger-bar/Combo1_PNG.png';
-import combo2 from './assets/burger-bar/Combo2_PNG.png';
-import combo3 from './assets/burger-bar/Combo3_PNG.png';
+import combo1 from './assets/burger-bar/c1150x150.png';
+import combo2 from './assets/burger-bar/c2150x150.png';
+import combo3 from './assets/burger-bar/c3150x150.png';
 import order1 from './assets/burger-bar/Combo1m.png';
 import order2 from './assets/burger-bar/Combo2m.png';
 import order3 from './assets/burger-bar/Combo3m.png';
