@@ -16,6 +16,20 @@
     background-size: cover;
 }
 
+.Future .music, .Basura .music, .InsideBasura .music {
+    width: 10%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+.Future .exit, .Basura .exit, .InsideBasura .exit {
+    position: absolute;
+    width: 10%;
+    top: 80%;
+    left: 85%;
+}
+
 @media (max-width: 560px) {
     .image {
         width: 100%;
@@ -24,16 +38,26 @@
     }
     .logo-basura {
         width: 100% !important;
-      }
-} 
+    }
+    .Future .exit, .Basura .exit, .InsideBasura .exit {
+        position: absolute;
+        width: 25%;
+        top: 84%;
+        -webkit-transform: rotate(-18deg);
+        transform: rotate(-35deg);
+        left: 71%;
+    }
+    .Future .music, .Basura .music, .InsideBasura .music {
+        width: 24%;
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+    }
+}
 
-
-.insidebasura{
+.insidebasura {
     width: 100%;
     height: 98vh;
     position: absolute;
     top: 1%;
 }
-
-
-

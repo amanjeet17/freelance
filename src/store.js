@@ -59,6 +59,7 @@ import hat10 from './assets/hats/model_5.jpg';
 
 
 
+import psst from './assets/audio/psst.mp3';
 import audio from './assets/audio/sound.ogg';
 import background from './assets/store/final/Newworld_desktop.png'
 import backgroundMobile from './assets/store/final/Newworld_mobile.png'
@@ -68,17 +69,22 @@ class Store extends Component {
   constructor(props) {
     super(props);
     this.audioRef = React.createRef();
-    this.state = { play: true }
+    this.psst = React.createRef();
+    this.state = { play: false }
   }
 
   componentDidMount() {
     var list = document.getElementsByTagName("audio")[0]
-    list.classList.add("mystyle")
+    list.classList.add("mystyle");
+    this.audioRef.current.currentTime = 0;
+    this.audioRef.current.play();
     // console.log("audios tag",list)
     // document.getElementsByClassName('react-audio-player ')[0].loop = true
   }
 
   click1 = () => {
+    this.psst.current.currentTime = 0;
+    this.psst.current.play();
     document.getElementById("store10l").style.display = "none"
     document.getElementById("store11").style.display = "inline"
   }
@@ -130,11 +136,12 @@ class Store extends Component {
             src={audio}
             loop={true}
             ref={this.audioRef}></audio>
+          <audio src={psst} ref={this.psst}></audio>
           <div className="container-fluid">
             <div>
-                <img
-                  className="storeBackground"
-                  src={window.screen.width > 560 ? background : backgroundMobile} />
+              <img
+                className="storeBackground"
+                src={window.screen.width > 560 ? background : backgroundMobile} />
             </div>
 
             <div>
@@ -183,7 +190,9 @@ class Store extends Component {
               <img src={portal} className="portal" data-toggle="modal" data-target="#myModal" id="portal" />
             </div>
             <div>
-              <img src={store13} className="images store13" id="store13" />
+              <a href="/future">
+                <img src={store13} className="images store13" id="store13" />
+              </a>
             </div>
             <div>
               <img
@@ -237,12 +246,12 @@ class Store extends Component {
         </div>
 
 
-        <div id="tuhutzss" class="modal fade " role="dialog" style={{overflow: "scroll"}}>
+        <div id="tuhutzss" class="modal fade " role="dialog" style={{ overflow: "scroll" }}>
           <div className="modal-dialog modal-md">
             <div className="modal-content">
               <div className="modal-body karl-bio">
                 <div className="col-xs-12">
-                <img src={Karl} className="karl" id="karl" />
+                  <img src={Karl} className="karl" id="karl" />
                   Tuhutzs is the artistic name for Karl Bauer.
                   Born England, United Kingdom 04/07/1988
                   Specialising in video production Karl adopts many disciplines to describe & present his work.
@@ -267,7 +276,7 @@ class Store extends Component {
                   basic food and water, but do we really need the thousands of options and designs, left solely
                   upon an end choice that is, what can you afford to buy.
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -419,7 +428,7 @@ class Store extends Component {
           </div>
         </div>
 
-     
+
 
       </React.Fragment>
     );
